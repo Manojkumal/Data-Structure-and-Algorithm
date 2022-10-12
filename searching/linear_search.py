@@ -4,6 +4,7 @@ def linear_search(arr,x):
     for i in range(len(arr)):
         if x==arr[i]:
             return i
+    return -1
 
 
 # dirver code
