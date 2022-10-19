@@ -14,3 +14,7 @@ arr = [7, 1, 5, 3, 6, 4, 15]
 # function calling
 result = maxprofit(arr)
 print(f"The maximum profit to buy and sell the stock is :{result}")
+
+
+# Time complexity: O(n)
+# space complexity: O(1)
