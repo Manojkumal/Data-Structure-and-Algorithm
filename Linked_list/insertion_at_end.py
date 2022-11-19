@@ -11,12 +11,18 @@ class LinkedList():
 
 
 # insert at the front of the linkedlist
-    def insertAtBegining(self,new_data):
+    def insertAtEnd(self,new_data):
         # creation of new node
         new_node = Node(new_data)
-        # insertion at begining
-        new_node.next = self.head
-        self.head = new_node
+        if self.head is None:
+            self.head = new_node
+            return 
+        # insertion at end
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+        
 # print the linkedlist
     def printLinkedList(self):
         temp = self.head
@@ -26,8 +32,8 @@ class LinkedList():
 
 
 llist = LinkedList()
-llist.insertAtBegining(12)
-llist.insertAtBegining(10)
-llist.insertAtBegining(14)
-llist.insertAtBegining(8)
+llist.insertAtEnd(12)
+llist.insertAtEnd(10)
+llist.insertAtEnd(14)
+llist.insertAtEnd(8)
 llist.printLinkedList()
